@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Template Project title"
+config/icon="res://screens/logo_complete.png"
+
+[display]
+
+window/size/height=800
+
+[editor_plugins]
+
+enabled=PoolStringArray( "net.kivano.fsm", "vnen.tiled_importer" )
+
+[gui]
+
+theme/custom="res://assets/theme/theme.tres"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
