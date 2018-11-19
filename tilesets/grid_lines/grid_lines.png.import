@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/grid_lines.png-beef853b47aa830c8383e5f6cc4d03ce.stex"
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://tilesets/grid_lines/grid_lines.png"
+dest_files=[ "res://.import/grid_lines.png-beef853b47aa830c8383e5f6cc4d03ce.stex" ]
 
 [params]
 

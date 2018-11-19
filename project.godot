@@ -10,20 +10,14 @@ config_version=3
 
 [application]
 
-config/name="Template Project title"
-config/icon="res://screens/logo_complete.png"
+config/name="Grid-based pathfinding with Astar"
+run/main_scene="res://Game.tscn"
+config/icon="res://icon.png"
 
-[display]
+[input]
 
-window/size/height=800
-
-[editor_plugins]
-
-enabled=PoolStringArray( "net.kivano.fsm", "vnen.tiled_importer" )
-
-[gui]
-
-theme/custom="res://assets/theme/theme.tres"
+click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
 
 [rendering]
 
