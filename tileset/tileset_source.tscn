@@ -10,6 +10,7 @@
 
 position = Vector2( 32, 32 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Region" ]
 
 [node name="PathStart" type="Sprite" parent="." index="1"]
 
