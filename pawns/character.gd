@@ -1,4 +1,4 @@
-extends Position2D
+extends "pawn.gd"
 
 export(float) var SPEED = 200.0
 

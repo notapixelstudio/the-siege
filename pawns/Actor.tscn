@@ -10,7 +10,7 @@ length = 0.1
 loop = false
 step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Pivot/Sprite:position")
+tracks/0/path = NodePath("../Pivot/Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -65,18 +65,28 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.20007, 0.917384 ), Vector2( 0.916712, 1.13495 ), Vector2( 1, 1 ) ]
 }
 
-[node name="Actor" type="Node2D" index="0"]
+[node name="Actor" type="Position2D" index="0"]
 
 position = Vector2( 32, 32 )
 z_index = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
 type = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+[node name="Pivot" type="Position2D" parent="." index="0"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="Pivot" index="0"]
+
+position = Vector2( 1.43051e-06, -1.90735e-06 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -32, -32 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot" index="1"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -87,7 +97,7 @@ anims/bump = SubResource( 1 )
 anims/walk = SubResource( 2 )
 blend_times = [  ]
 
-[node name="Tween" type="Tween" parent="." index="1"]
+[node name="Tween" type="Tween" parent="Pivot" index="2"]
 
 repeat = false
 playback_process_mode = 1
@@ -96,16 +106,12 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Pivot" type="Position2D" parent="." index="2"]
+[node name="Movements" type="Node" parent="." index="1"]
 
-_sections_unfolded = [ "Transform" ]
+[node name="Actions" type="Node" parent="." index="2"]
 
-[node name="Sprite" type="Sprite" parent="Pivot" index="0"]
+[node name="Jobs" type="Node" parent="." index="3"]
 
-position = Vector2( 1.43051e-06, -1.90735e-06 )
-texture = ExtResource( 2 )
-centered = false
-offset = Vector2( -32, -32 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+[node name="StateMachine" type="Node" parent="." index="4"]
 
 
