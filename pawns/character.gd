@@ -2,7 +2,7 @@ extends "pawn.gd"
 
 export(float) var SPEED = 200.0
 
-enum STATES { IDLE, FOLLOW }
+enum  { IDLE, FOLLOW }
 var _state = null
 
 var path = []
@@ -11,14 +11,18 @@ var target_position = Vector2()
 
 var velocity = Vector2()
 
+export (int) var MAX_CELLS = 5
+
 func _ready():
 	_change_state(IDLE)
 
 
 func _change_state(new_state):
 	if new_state == FOLLOW:
-		path = get_parent().get_path(position, target_position)
-		if not path or len(path) == 1:
+		path = get_parent().get_this_path(position, target_position)
+		print(len(path))
+		print(path)
+		if not path or len(path) == 1 or len(path)>MAX_CELLS:
 			_change_state(IDLE)
 			return
 		# The index 0 is the starting cell
@@ -42,7 +46,6 @@ func _process(delta):
 func move_to(world_position):
 	var MASS = 10.0
 	var ARRIVE_DISTANCE = 10.0
-
 	var desired_velocity = (world_position - position).normalized() * SPEED
 	var steering = desired_velocity - velocity
 	velocity += steering / MASS

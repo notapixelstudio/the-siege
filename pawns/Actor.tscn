@@ -72,6 +72,7 @@ z_index = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 type = 0
+combat_template = null
 
 [node name="Pivot" type="Position2D" parent="." index="0"]
 
